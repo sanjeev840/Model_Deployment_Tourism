@@ -8,8 +8,18 @@ from pathlib import Path
 #model_path = os.path.join(os.path.dirname(__file__), "tourism_package_prediction_model_v1.joblib")
 #model = joblib.load(model_path)
 
-model_path = Path(__file__).resolve().parent/"tourism_package_prediction_model_v1.joblib"
+#model_path = Path(__file__).resolve().parent/"tourism_package_prediction_model_v1.joblib"
+#model = joblib.load(model_path)
+
+# Get the folder where app.py is located
+BASE_DIR = Path(__file__).resolve().parent
+
+# Model file is in the same folder as app.py
+model_path = BASE_DIR / "tourism_package_prediction_model_v1.joblib"
+
+# Load model
 model = joblib.load(model_path)
+
 
 
 st.title("Tourism Package Purchase Prediction App")
