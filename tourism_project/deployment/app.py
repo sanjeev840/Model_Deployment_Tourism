@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 import joblib
-4from pathlib import Path
+from pathlib import Path
 
 # Load the model committed by the pipeline (sits next to this file)
 #model_path = os.path.join(os.path.dirname(__file__), "tourism_package_prediction_model_v1.joblib")
